@@ -20,20 +20,20 @@ class User extends Ardent implements UserInterface, RemindableInterface {
 	 */
 	protected $hidden = array('password');
 
-    public $autoPurgeRedundantAttributes = true;
+    // public $autoPurgeRedundantAttributes = true;
 
-    public static $rules = array(
-        'username' => 'required|between:4,16',
-        'email' => 'required|email',
-        'password' => 'required|alpha_num|min:8|confirmed',
-        'password_confirmation' => 'required|alpha_num|min:8',
-    );
-    public static $factory = array(
-        'username' => 'string',
-        'email' => 'email',
-        'password' => 'password',
-        'password_confirmation' => 'password'
-    );
+    // public static $rules = array(
+    //     'username' => 'required|between:4,16',
+    //     'email' => 'required|email',
+    //     'password' => 'required|alpha_num|min:8|confirmed',
+    //     'password_confirmation' => 'required|alpha_num|min:8',
+    // );
+    // public static $factory = array(
+    //     'username' => 'string',
+    //     'email' => 'email',
+    //     'password' => 'password',
+    //     'password_confirmation' => 'password'
+    // );
 
     public function docs()
     {

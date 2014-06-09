@@ -12,20 +12,15 @@ class CreateDocsTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('docs', function($table)
+		Schema::dropIfExists('docs');
+        Schema::create('docs', function($table)
 		{
 			$table->increments('id');
             $table->integer('user_id');
-			$table->string('title', 64);
+			$table->string('title', 124);
 			$table->text('content');
 			$table->timestamps();
 		});
-		// DB::table('docs')->insert(array(
-		// 	'title'=>'test',
-		// 	'content'=>'just a test!',
-  //           'created_at'=>time(),
-  //           'updated_at'=>''
-		// ));
 	}
 
 	/**
